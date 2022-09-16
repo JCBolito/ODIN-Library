@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+	--black: #444444;
+	--green: #53C265;
+	--red: #C25353;
+	--white: #FFFFFF;
+	--gray: #E7E7E7;
+	font-family: 'Inter', Arial, Helvetica, sans-serif;
+	color: #444444;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	text-align: center;
+	display: grid;
+	gap: 1rem;
+	padding: 2rem;
+}
+
+header>h1 {
+	font-size: 3rem;
+	font-weight: 900;
+}
+
+header>button,
+form>button {
+	background-color: var(--green);
+	color: var(--white);
+
+	font-weight: 700;
+	font-size: 1rem;
+
+	border: 0;
+	border-radius: 1rem;
+	padding: 0.5rem 1rem;
+
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-self: center;
+	align-items: center;
+	gap: 0.5rem;
+
+	transition: 0.2s ease-in-out;
+}
+
+header>button:hover,
+form>button:hover {
+	transform: scale(1.05);
+}
+
+header>button>img,
+form>button>img {
+	width: 2rem;
+}
+
+section>.guide {
+	display: grid;
+	grid-template-columns: auto auto;
+	place-content: center;
+	gap: 1rem;
+}
+
+section>.guide>p {
+	padding: 0 1rem;
+}
+
+section>.guide>p:first-child {
+	border-top: 0.5rem solid var(--green);
+}
+
+section>.guide>p:last-child {
+	border-top: 0.5rem solid var(--red);
+}
+
+form {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1rem;
+
+	background-color: var(--gray);
+	display: grid;
+	place-content: center;
+	width: 20rem;
+	text-align: center;
+	gap: 1rem;
+}
+
+form>div:not(:last-of-type) {
+	display: grid;
+}
+
+form>div>input:not([type="checkbox"]) {
+	width: 20rem;
+}

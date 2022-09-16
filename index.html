@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>myLibrary</title>
+	<link rel="shortcut icon" href="./img/bookshelf.png" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<h1>myLibrary</h1>
+		<button>
+			<img src="./img/plus-circle.png" alt="Add Book">
+			addBook
+		</button>
+		<section>
+			<h2>read?</h2>
+			<div class="guide">
+				<p>yes</p>
+				<p>no</p>
+			</div>
+		</section>
+	</header>
+	<form action="#">
+		<div>
+			<label for="author">author</label>
+			<input type="text" name="author" id="author">
+		</div>
+		<div>
+			<label for="title">title</label>
+			<input type="text" name="title" id="title">
+		</div>
+		<div>
+			<label for="pages">pages</label>
+			<input type="number" name="pages" id="pages">
+		</div>
+		<div>
+			<input type="checkbox" name="read" id="read">
+			<label for="read">have you read this?</label>
+		</div>
+		<button>
+			<img src="./img/content-save.png" alt="Save">
+			saveBook
+		</button>
+	</form>
+</body>
+
+</html>
