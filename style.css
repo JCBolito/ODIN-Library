@@ -6,8 +6,11 @@
 	--red: #C25353;
 	--white: #FFFFFF;
 	--gray: #E7E7E7;
+
+	--border-radius: 1rem;
 	font-family: 'Inter', Arial, Helvetica, sans-serif;
 	color: #444444;
+
 }
 
 * {
@@ -15,11 +18,19 @@
 	padding: 0;
 }
 
+body {
+	padding: 1rem;
+	display: grid;
+	justify-content: center;
+}
+
+/* HEADER */
 header {
 	text-align: center;
 	display: grid;
+	justify-items: center;
 	gap: 1rem;
-	padding: 2rem;
+	padding: 2rem 0;
 }
 
 header>h1 {
@@ -27,6 +38,7 @@ header>h1 {
 	font-weight: 900;
 }
 
+/* HEADER & FORM */
 header>button,
 form>button {
 	background-color: var(--green);
@@ -36,12 +48,11 @@ form>button {
 	font-size: 1rem;
 
 	border: 0;
-	border-radius: 1rem;
+	border-radius: var(--border-radius);
 	padding: 0.5rem 1rem;
 
 	display: grid;
 	grid-template-columns: auto auto;
-	justify-self: center;
 	align-items: center;
 	gap: 0.5rem;
 
@@ -58,6 +69,7 @@ form>button>img {
 	width: 2rem;
 }
 
+/* GUIDE */
 section>.guide {
 	display: grid;
 	grid-template-columns: auto auto;
@@ -77,6 +89,11 @@ section>.guide>p:last-child {
 	border-top: 0.5rem solid var(--red);
 }
 
+/* FORM */
+.hidden {
+	display: none;
+}
+
 form {
 	position: absolute;
 	left: 0;
@@ -85,18 +102,65 @@ form {
 	margin-right: auto;
 	padding: 1rem;
 
+	border-radius: var(--border-radius);
 	background-color: var(--gray);
 	display: grid;
 	place-content: center;
-	width: 20rem;
+	width: 80vw;
+	max-width: 20rem;
 	text-align: center;
 	gap: 1rem;
 }
 
 form>div:not(:last-of-type) {
 	display: grid;
+	gap: 0.25rem;
+}
+
+form>div:not(:last-of-type)>label {
+	font-weight: 700;
+	font-size: 1rem;
 }
 
 form>div>input:not([type="checkbox"]) {
-	width: 20rem;
+	font-family: var();
+	font-size: 1.15rem;
+	color: var(--black);
+	text-align: center;
+
+	border-radius: var(--border-radius);
+	border: 0;
+	width: 70vw;
+	max-width: 17rem;
+	padding: 0.85rem 1rem;
+}
+
+
+
+/* MAIN */
+main {
+	background-color: var(--gray);
+	width: 90vw;
+	padding: 0.5rem;
+	border-radius: var(--border-radius);
+
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+article {
+	border: 0.35rem solid var(--green);
+	border-radius: calc(var(--border-radius)/2);
+	padding: 1rem;
+
+	display: grid;
+	gap: 0.5rem;
+	text-align: center;
+}
+
+.read>input[type="checkbox"] {
+	width: 1.5rem;
+	height: 1.5rem;
+	accent-color: var(--green);
 }
