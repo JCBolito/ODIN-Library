@@ -40,7 +40,7 @@ header>h1 {
 
 /* HEADER & FORM */
 header>button,
-form>button {
+.saveBook {
 	background-color: var(--green);
 	color: var(--white);
 
@@ -94,17 +94,37 @@ section>.guide>p:last-child {
 	display: none;
 }
 
-form {
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 1rem;
+button.close {
+	border-radius: 50%;
+	background-color: var(--red);
+	width: 2rem;
+	height: 2rem;
+	display: grid;
+	place-items: center;
+	border: 0;
+	transition: 0.2s ease-in-out;
+}
 
+button.close>img {
+	width: 1.5rem;
+	filter: invert(100%);
+}
+
+
+form {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin: auto;
+	transform: translate(-50%, -50%);
+
+	padding: 1rem;
 	border-radius: var(--border-radius);
 	background-color: var(--gray);
+	box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+
 	display: grid;
+	justify-items: center;
 	place-content: center;
 	width: 80vw;
 	max-width: 20rem;
@@ -140,8 +160,9 @@ form>div>input:not([type="checkbox"]) {
 /* MAIN */
 main {
 	background-color: var(--gray);
+	box-shadow: inset 5px 5px 4px rgba(0, 0, 0, 0.25);
 	width: 90vw;
-	padding: 0.5rem;
+	padding: 1rem;
 	border-radius: var(--border-radius);
 
 	display: grid;
@@ -150,13 +171,16 @@ main {
 }
 
 article {
-	border: 0.35rem solid var(--green);
 	border-radius: calc(var(--border-radius)/2);
 	padding: 1rem;
-
+	background: radial-gradient(circle, rgba(226, 167, 167, 1) 0%, rgba(224, 102, 102, 1) 100%);
 	display: grid;
 	gap: 0.5rem;
 	text-align: center;
+}
+
+article.bookRead {
+	background: radial-gradient(circle, rgba(190, 226, 167, 1) 0%, rgba(102, 224, 105, 1) 100%);
 }
 
 .read>input[type="checkbox"] {
