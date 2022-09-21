@@ -3,6 +3,7 @@
 :root {
 	--black: #444444;
 	--green: #53C265;
+	--disable-green: #91c199;
 	--red: #C25353;
 	--white: #FFFFFF;
 	--gray: #E7E7E7;
@@ -41,6 +42,7 @@ header>h1 {
 /* HEADER & FORM */
 header>button,
 .saveBook {
+	cursor: pointer;
 	background-color: var(--green);
 	color: var(--white);
 
@@ -155,6 +157,14 @@ form>div>input:not([type="checkbox"]) {
 	padding: 0.85rem 1rem;
 }
 
+.saveBook.disableButton {
+	background-color: var(--disable-green);
+}
+
+.saveBook.disableButton:hover {
+	transform: scale(1);
+	cursor: auto;
+}
 
 
 /* MAIN */
