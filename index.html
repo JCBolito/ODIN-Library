@@ -26,27 +26,27 @@
 			</div>
 		</section>
 	</header>
-	<form action="#" class="hidden">
+	<form action="#" class="hidden" novalidate>
 		<button class="close">
 			<img src="./img/close.png" alt="Close Form">
 		</button>
 		<div>
 			<label for="title">title</label>
-			<input type="text" name="title" id="title" required>
+			<input type="text" name="title" id="title" class="requiredInput" required>
 		</div>
 		<div>
 			<label for="author">author</label>
-			<input type="text" name="author" id="author" required>
+			<input type="text" name="author" id="author" class="requiredInput" required>
 		</div>
 		<div>
 			<label for="pages">pages</label>
-			<input type="number" name="pages" id="pages" min="0" required>
+			<input type="number" name="pages" id="pages" min="0" class="requiredInput" required>
 		</div>
 		<div>
-			<input type="checkbox" name="read" id="read">
-			<label for="read">have you read this?</label required>
+			<input type="checkbox" name="formRead" id="formRead">
+			<label for="formRead">have you read this?</label>
 		</div>
-		<button class="saveBook disableButton" type="button" onclick="return addBookToLibrary() ">
+		<button class="saveBook disableButton" type="button" disabled>
 			<img src="./img/content-save.png" alt="Save">
 			saveBook
 		</button>
@@ -66,10 +66,15 @@
 				<h1>523</h1>
 			</div>
 			<div class="bookContent read">
-				<p>read</p>
-				<label for="bookRead"></label>
-				<input type="checkbox" name="bookRead" id="bookRead" class="toggle">
+				<label for="bookRead">
+					read
+					<input type="checkbox" name="bookRead" id="bookRead" class="toggle">
+				</label>
 			</div>
+			<button class="removeBook" type="button">
+				<img src="./img/delete.png" alt="Delete">
+				deleteBook
+			</button>
 		</article>
 		<article>
 			<div class="bookContent title">
@@ -85,10 +90,15 @@
 				<h1>523</h1>
 			</div>
 			<div class="bookContent read">
-				<p>read</p>
-				<input type="checkbox" name="read" id="read" class="toggle">
-				<label for="read"></label>
+				<label for="readStatus">
+					read
+					<input type="checkbox" name="readStatus" id="readStatus" class="toggle">
+				</label>
 			</div>
+			<button class="removeBook" type="button">
+				<img src="./img/delete.png" alt="Delete">
+				deleteBook
+			</button>
 		</article>
 	</main>
 </body>
