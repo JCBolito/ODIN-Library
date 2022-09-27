@@ -2,9 +2,11 @@
 
 :root {
 	--black: #444444;
+	--red: rgba(224, 102, 102, 1);
+	--red-gradient: linear-gradient(330deg, rgba(226, 167, 196, 1) 0%, rgba(224, 102, 102, 1) 100%);
+	--green-gradient: linear-gradient(130deg, rgba(200, 226, 167, 1) 0%, rgba(102, 224, 167, 1) 100%);
 	--green: #53C265;
 	--disable-green: #91c199;
-	--red: #C25353;
 	--white: #FFFFFF;
 	--gray: #E7E7E7;
 
@@ -44,7 +46,7 @@ header>button,
 .saveBook,
 article>button {
 	cursor: pointer;
-	background-color: var(--green);
+	background: var(--green);
 	color: var(--white);
 
 	font-weight: 700;
@@ -193,14 +195,14 @@ main {
 article {
 	border-radius: calc(var(--border-radius)/2);
 	padding: 1rem;
-	background: radial-gradient(circle, rgba(226, 167, 167, 1) 0%, rgba(224, 102, 102, 1) 100%);
+	background: var(--red-gradient);
 	display: grid;
 	gap: 0.8rem;
 	text-align: center;
 }
 
 article.bookRead {
-	background: radial-gradient(circle, rgba(190, 226, 167, 1) 0%, rgba(102, 224, 105, 1) 100%);
+	background: var(--green-gradient);
 }
 
 .read>label {
@@ -210,11 +212,12 @@ article.bookRead {
 }
 
 .read>label>input[type="checkbox"] {
+	cursor: pointer;
 	width: 1.5rem;
 	height: 1.5rem;
 	accent-color: var(--green);
 }
 
 .removeBook {
-	background-color: var(--red);
+	background: var(--red);
 }
