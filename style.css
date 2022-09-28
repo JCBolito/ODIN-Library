@@ -22,8 +22,10 @@
 }
 
 body {
-	padding: 1rem;
+	min-height: 100vh;
+	/* padding: 1rem; */
 	display: grid;
+	grid-template-rows: min-content min-content 1fr;
 	justify-content: center;
 }
 
@@ -33,7 +35,7 @@ header {
 	display: grid;
 	justify-items: center;
 	gap: 1rem;
-	padding: 2rem 0;
+	margin: 2rem 0;
 }
 
 header>h1 {
@@ -99,7 +101,7 @@ section>.guide>p:last-child {
 
 /* FORM */
 .hidden {
-	display: none;
+	visibility: hidden;
 }
 
 button.close {
@@ -181,10 +183,8 @@ form>div>input:not([type="checkbox"]) {
 
 /* MAIN */
 main {
-	background-color: var(--gray);
-	box-shadow: inset 5px 5px 4px rgba(0, 0, 0, 0.25);
-	width: 90vw;
-	padding: 1rem;
+	width: 85vw;
+	margin: 2rem 0;
 	border-radius: var(--border-radius);
 
 	display: grid;
@@ -215,9 +215,35 @@ article.bookRead {
 	cursor: pointer;
 	width: 1.5rem;
 	height: 1.5rem;
-	accent-color: var(--green);
 }
 
 .removeBook {
 	background: var(--red);
+}
+
+/* FOOTER */
+footer {
+	font-weight: 700;
+	display: grid;
+	align-items: center;
+	align-self: end;
+	justify-self: center;
+	gap: 0.5rem;
+	margin: 2rem 0;
+}
+
+.links {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 1rem;
+	justify-self: center;
+}
+
+footer>.links>a>img {
+	width: 2rem;
+	transition: 0.2s ease-in-out;
+}
+
+footer>.links>a>img:hover {
+	transform: scale(1.1);
 }
